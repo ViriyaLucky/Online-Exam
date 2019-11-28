@@ -1,6 +1,6 @@
 # Online Exam
 
-This project is an Angular project where we create an online exam using Angular 7.
+This project is an Angular project where we create an online exam using Angular 7 and firebase.
 
 ## Requirements
 * [node.js](https://nodejs.org/en/)
