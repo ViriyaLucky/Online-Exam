@@ -10,6 +10,6 @@ An Online Based Exam Using Angular 7.0
 * [rxjs](https://rxjs-dev.firebaseapp.com/)
 * [firebase-admin](https://www.npmjs.com/package/firebase-admin)
 
-## To be implemented
+## TO DO
 * Fixing UI
 * Adding more features
