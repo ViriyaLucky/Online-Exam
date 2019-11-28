@@ -20,7 +20,6 @@
 *.bat             text eol=crlf
 *.cmd             text eol=crlf
 *.coffee          text
-*.css             text
 *.htm             text diff=html
 *.html            text diff=html
 *.inc             text
