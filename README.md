@@ -1,15 +1,18 @@
-# Online-Exam
-An Online Based Exam Using Angular 7.0
+# Firebase Authentication with Angular
 
-## Requirements
-* [Node.js](https://nodejs.org/en/)
-* [Angular 7.0](https://angular.io/)
-* [ng-bootstrap](https://ng-bootstrap.github.io/#/home)
-* [angularfire2](https://github.com/angular/angularfire)
-* [firebase](https://firebase.google.com/)
-* [rxjs](https://rxjs-dev.firebaseapp.com/)
-* [firebase-admin](https://www.npmjs.com/package/firebase-admin)
+This project is part of an Angular tutorial where we explore how to setup a simple email/password as well as social login authentication workflows for Angular 7 apps using the awesome AngularFire2 library.
 
-## TO DO
-* Fixing UI
-* Adding more features
+Get the step by step free tutorial in https://angular-templates.io/tutorials/about/firebase-authentication-with-angular
+
+
+**Please support this project by simply putting a Github star ⭐. Share this repo with friends on Twitter and everywhere else you can. 🙏 Thanks**
+
+## Installation
+
+Run `npm install` to install all the required dependencies
+
+Then run `ng serve` to start a dev server.
+Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+
+![](https://s3-us-west-2.amazonaws.com/angular-templates/tutorials/firebase-authentication-with-angular/firebase-tutorial-login-screenshot.png)

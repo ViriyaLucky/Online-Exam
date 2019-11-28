@@ -1,0 +1,27 @@
+<nav class="navbar navbar-default navbar-static-top navbar-inverse">
+  <div class="container">
+    	<h4 class="navbar-text navbar-left" style="color:white;text-align: left;">{{this.user.name}}</h4>
+    <a (click)="logout()" class="navbar-text navbar-right navbar-link">Logout</a>
+  </div>
+</nav>
+
+<h1 class="header text-center">Hasil</h1>
+<div style="display:block; margin:auto;margin-bottom:20px;">
+</div>
+
+
+
+<div>
+    <div class="container">
+
+        <div>
+            <!-- items being paged -->
+            <div *ngFor="let hasils of hasil; let i = index">
+                {{i+1}}.{{soals[i]}}
+                <br>
+                {{hasils}}
+            </div>
+           <h3>Score: {{score}}</h3>
+    </div>
+
+</div>

@@ -1,0 +1,61 @@
+<nav class="navbar navbar-default navbar-static-top navbar-inverse">
+  <div class="container">
+    	<h4 class="navbar-text navbar-left" style="color:white;text-align: left;">{{this.user.name}}</h4>
+      <h4 id="demo" class="navbar-text navbar-center" style="color:white;text-align: center;" >{{menit}}m {{timeLeft%60}}s</h4>
+    <a (click)="logout()" class="navbar-text navbar-right navbar-link">Logout</a>
+  </div>
+</nav>
+
+<h1 class="header">Kerjakan soal soal berikut</h1>
+<div style="display:block; margin:auto;margin-bottom:20px;">
+</div>
+
+<div>
+    <div class="container">
+        <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+
+        <div class="text-center">
+            <!-- items being paged -->
+            <div *ngFor="let soal of pagedItems; let i = index">
+               <h4 id="soal">{{pager.currentPage}}. {{ soal }}</h4>
+              <br>
+              <ol type="a" style="text-align: left; margin-left:30%">
+                  <li><input type="radio" name="{{pager.currentPage-1}}" formControlName="{{pager.currentPage-1}}" value="A"> {{ this.jawab1[pager.currentPage-1] }} <br></li>
+                  <li><input type="radio" name="{{pager.currentPage-1}}" formControlName="{{pager.currentPage-1}}" value="B"> {{ this.jawab2[pager.currentPage-1] }} <br></li>
+                  <li><input type="radio" name="{{pager.currentPage-1}}" formControlName="{{pager.currentPage-1}}" value="C"> {{ this.jawab3[pager.currentPage-1] }} <br></li>
+                  <li><input type="radio" name="{{pager.currentPage-1}}" formControlName="{{pager.currentPage-1}}" value="D"> {{ this.jawab4[pager.currentPage-1] }} </li>
+                  <br><br>
+                </ol>
+
+            </div>
+
+            <!-- pager -->
+            <ul *ngIf="pager.pages && pager.pages.length" class="pagination">
+                <li [ngClass]="{disabled:pager.currentPage === 1}">
+                    <a (click)="setPage(1)">First</a>
+                </li>
+                <li [ngClass]="{disabled:pager.currentPage === 1}">
+                    <a (click)="setPage(pager.currentPage - 1)">Previous</a>
+                </li>
+                <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}">
+                    <a (click)="setPage(page)">{{page}}</a>
+                </li>
+                <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+                    <a (click)="setPage(pager.currentPage + 1)">Next</a>
+                </li>
+                <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+                    <a (click)="setPage(pager.totalPages)">Last</a>
+                </li>
+
+            </ul>
+
+          </div>
+          <div class="col text-center">
+              <button type="submit" [disabled]="!profileForm.valid"  class="btn btn-default">Submit</button>
+
+            </div>
+
+        </form>
+    </div>
+
+</div>
