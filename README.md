@@ -5,3 +5,4 @@ An Online Based Exam Using Angular 7.0
 * [Node.js](https://nodejs.org/en/)
 * [Angular 7.0](https://angular.io/)
 * [ng-bootstrap](https://ng-bootstrap.github.io/#/home)
+* [angularfire2](https://github.com/angular/angularfire)
